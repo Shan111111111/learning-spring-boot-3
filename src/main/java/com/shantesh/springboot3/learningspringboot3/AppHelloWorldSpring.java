@@ -14,6 +14,7 @@ public class AppHelloWorldSpring {
 		var context = new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
 //		Configure the things that we want Spring to manage --> HelloWorldConfiguration.java
 		System.out.println(context.getBean("returnName"));
+		System.out.println(context.getBean("returnAge"));
 	}
 
 }

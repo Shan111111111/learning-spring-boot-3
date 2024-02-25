@@ -10,4 +10,8 @@ public class HelloWorldConfiguration {
 	public String returnName() {
 		return "you are seeing the Bean value";
 	}
+	@Bean
+	public int returnAge() {
+		return 12222;
+	}
 }
