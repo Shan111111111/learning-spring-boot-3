@@ -30,8 +30,8 @@ public class HelloWorldConfiguration {
 		return person;
 	}
 	@Bean
-	public Person person3ByParameters(String name, int age, @Qualifier("takeThis")Address customAddressName2) {
-		var person = new Person(name, age, customAddressName2);
+	public Person person3ByParameters(String name, int age, @Qualifier("takeThis")Address faf) {
+		var person = new Person(name, age, faf);
 		return person;
 	}
 	@Bean(name = "customAddressName")
