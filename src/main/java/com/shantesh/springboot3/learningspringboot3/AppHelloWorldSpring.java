@@ -1,5 +1,7 @@
 package com.shantesh.springboot3.learningspringboot3;
 
+import java.util.Arrays;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.shantesh.springboot3.learningspringboot3.game.GameRunner;
@@ -20,6 +22,10 @@ public class AppHelloWorldSpring {
 		System.out.println(context.getBean("person3ByParameters"));
 		System.out.println(context.getBean("customAddressName"));
 //		System.out.println(context.getBean(Address.class));
+		
+//		System.out.println
+		Arrays.stream(context.getBeanDefinitionNames())
+		.forEach(System.out::println);
 	}
 
 }
