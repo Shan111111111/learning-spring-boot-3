@@ -22,6 +22,11 @@ public class HelloWorldConfiguration {
 		var person = new Person("Ravi", 20);
 		return person;
 	}
+	@Bean
+	public Person person2ByMethodcall() {
+		var person = new Person(returnName(), returnAge());
+		return person;
+	}
 	@Bean(name = "customAddressName")
 	public Address returnAddress() {
 		var address = new Address("Ecity", "Bangalore");
