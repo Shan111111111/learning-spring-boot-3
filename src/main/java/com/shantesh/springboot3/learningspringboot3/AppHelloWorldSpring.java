@@ -17,6 +17,7 @@ public class AppHelloWorldSpring {
 		System.out.println(context.getBean("returnAge"));
 		System.out.println(context.getBean("returnPerson"));
 		System.out.println(context.getBean("customAddressName"));
+		System.out.println(context.getBean(Address.class));
 	}
 
 }
