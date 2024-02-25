@@ -2,9 +2,9 @@ package com.shantesh.springboot3.learningspringboot3.game;
 
 public class GameRunner {
 
-	SuperContraGame marioGame;
+	GamesInterface marioGame;
 	
-	public GameRunner(SuperContraGame marioGame) {
+	public GameRunner(GamesInterface marioGame) {
 		this.marioGame = marioGame;
 	}
 

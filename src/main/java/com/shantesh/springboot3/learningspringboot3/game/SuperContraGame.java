@@ -1,6 +1,6 @@
 package com.shantesh.springboot3.learningspringboot3.game;
 
-public class SuperContraGame {
+public class SuperContraGame implements GamesInterface {
 	
 	public void up() {
 		System.out.println("Swing");
