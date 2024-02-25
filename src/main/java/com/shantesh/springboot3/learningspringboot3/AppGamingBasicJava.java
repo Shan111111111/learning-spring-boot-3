@@ -7,9 +7,9 @@ import com.shantesh.springboot3.learningspringboot3.game.SuperContraGame;
 public class AppGamingBasicJava {
 	
 	public static void main(String[] args) {
-		
-		var superContraGame = new SuperContraGame();
-		var gameRunner = new GameRunner(superContraGame);
+		var game = new MarioGame();
+//		var game = new SuperContraGame();
+		var gameRunner = new GameRunner(game);
 		gameRunner.run();
 		
 	}

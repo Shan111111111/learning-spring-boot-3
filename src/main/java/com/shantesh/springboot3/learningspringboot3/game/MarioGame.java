@@ -1,6 +1,6 @@
 package com.shantesh.springboot3.learningspringboot3.game;
 
-public class MarioGame {
+public class MarioGame implements GamesInterface{
 	public void up() {
 		System.out.println("Jump");
 	}
