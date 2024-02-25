@@ -27,9 +27,19 @@ public class HelloWorldConfiguration {
 		var person = new Person(returnName(), returnAge(), returnAddress());
 		return person;
 	}
+	@Bean
+	public Person person3ByParameters(String name, int age, Address customAddressName2) {
+		var person = new Person(name, age, customAddressName2);
+		return person;
+	}
 	@Bean(name = "customAddressName")
 	public Address returnAddress() {
 		var address = new Address("Ecity", "Bangalore");
+		return address;
+	}
+	@Bean(name = "customAddressName2")
+	public Address returnAddress2() {
+		var address = new Address("Soraba", "Chickpet");
 		return address;
 	}
 	
