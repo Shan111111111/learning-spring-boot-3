@@ -13,6 +13,7 @@ public class AppHelloWorldSpring {
 //		Launch a Spring Context
 		var context = new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
 //		Configure the things that we want Spring to manage --> HelloWorldConfiguration.java
+		System.out.println(context.getBean("returnName"));
 	}
 
 }
