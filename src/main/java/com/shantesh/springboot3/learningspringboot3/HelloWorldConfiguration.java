@@ -1,5 +1,6 @@
 package com.shantesh.springboot3.learningspringboot3;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -29,7 +30,7 @@ public class HelloWorldConfiguration {
 		return person;
 	}
 	@Bean
-	public Person person3ByParameters(String name, int age, Address customAddressName2) {
+	public Person person3ByParameters(String name, int age, @Qualifier("takeThis")Address customAddressName2) {
 		var person = new Person(name, age, customAddressName2);
 		return person;
 	}
@@ -40,6 +41,7 @@ public class HelloWorldConfiguration {
 		return address;
 	}
 	@Bean(name = "customAddressName2")
+	@Qualifier("takeThis")
 	public Address returnAddress2() {
 		var address = new Address("Soraba", "Chickpet");
 		return address;
