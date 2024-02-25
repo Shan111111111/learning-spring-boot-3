@@ -3,7 +3,7 @@ package com.shantesh.springboot3.learningspringboot3;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-record Person(String name, int age) {};
+record Person(String name, int age, Address address) {};
 record Address(String firstLine, String city) {};
 
 @Configuration
@@ -19,12 +19,12 @@ public class HelloWorldConfiguration {
 	}
 	@Bean
 	public Person returnPerson() {
-		var person = new Person("Ravi", 20);
+		var person = new Person("Ravi", 20 , new Address("manual creation by new keyword", "manual creation by new keyword"));
 		return person;
 	}
 	@Bean
 	public Person person2ByMethodcall() {
-		var person = new Person(returnName(), returnAge());
+		var person = new Person(returnName(), returnAge(), returnAddress());
 		return person;
 	}
 	@Bean(name = "customAddressName")
