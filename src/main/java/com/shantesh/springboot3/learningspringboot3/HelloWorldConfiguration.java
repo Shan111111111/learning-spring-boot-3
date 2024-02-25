@@ -6,4 +6,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class HelloWorldConfiguration {
 
+	@Bean
+	public String returnName() {
+		return "you are seeing the Bean value";
+	}
 }
