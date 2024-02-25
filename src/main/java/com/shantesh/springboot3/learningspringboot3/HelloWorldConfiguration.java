@@ -22,7 +22,7 @@ public class HelloWorldConfiguration {
 		var person = new Person("Ravi", 20);
 		return person;
 	}
-	@Bean
+	@Bean(name = "customAddressName")
 	public Address returnAddress() {
 		var address = new Address("Ecity", "Bangalore");
 		return address;
