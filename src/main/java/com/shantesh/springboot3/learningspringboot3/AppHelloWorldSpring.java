@@ -21,7 +21,7 @@ public class AppHelloWorldSpring {
 		System.out.println(context.getBean("person2ByMethodcall"));
 		System.out.println(context.getBean("person3ByParameters"));
 		System.out.println(context.getBean("customAddressName"));
-//		System.out.println(context.getBean(Address.class));
+		System.out.println(context.getBean(Address.class));
 		
 //		System.out.println
 		Arrays.stream(context.getBeanDefinitionNames())

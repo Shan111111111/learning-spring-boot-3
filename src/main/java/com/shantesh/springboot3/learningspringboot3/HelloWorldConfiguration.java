@@ -2,6 +2,7 @@ package com.shantesh.springboot3.learningspringboot3;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 record Person(String name, int age, Address address) {};
 record Address(String firstLine, String city) {};
@@ -33,6 +34,7 @@ public class HelloWorldConfiguration {
 		return person;
 	}
 	@Bean(name = "customAddressName")
+	@Primary
 	public Address returnAddress() {
 		var address = new Address("Ecity", "Bangalore");
 		return address;
