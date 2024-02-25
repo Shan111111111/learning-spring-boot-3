@@ -15,6 +15,7 @@ public class AppHelloWorldSpring {
 //		Configure the things that we want Spring to manage --> HelloWorldConfiguration.java
 		System.out.println(context.getBean("returnName"));
 		System.out.println(context.getBean("returnAge"));
+		System.out.println(context.getBean("returnPerson"));
 	}
 
 }

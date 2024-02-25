@@ -3,6 +3,8 @@ package com.shantesh.springboot3.learningspringboot3;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+record Person(String name, int age) {};
+
 @Configuration
 public class HelloWorldConfiguration {
 
@@ -14,4 +16,10 @@ public class HelloWorldConfiguration {
 	public int returnAge() {
 		return 12222;
 	}
+	@Bean
+	public Person returnPerson() {
+		var person = new Person("Ravi", 20);
+		return person;
+	}
+	
 }
