@@ -13,12 +13,6 @@ import com.shantesh.springboot3.learningspringboot3.game.PacmanGame;
 @ComponentScan("com.shantesh.springboot3.learningspringboot3")
 public class AppGamingBasicJava {
 	
-
-	@Bean
-	public GameRunner returnGameRunner(GamesInterface returnGame) {
-		return new GameRunner(returnGame);
-	}
-
 	public static void main(String[] args) {
 
 		try (var context = new AnnotationConfigApplicationContext(AppGamingBasicJava.class)) {
