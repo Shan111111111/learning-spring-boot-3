@@ -1,5 +1,10 @@
 package com.shantesh.springboot3.learningspringboot3.game;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
 public class SuperContraGame implements GamesInterface {
 	
 	public void up() {
