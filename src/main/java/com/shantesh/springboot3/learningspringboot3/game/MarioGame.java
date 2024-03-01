@@ -1,9 +1,10 @@
 package com.shantesh.springboot3.learningspringboot3.game;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-
+@Qualifier("MarioGameQualifier")
 public class MarioGame implements GamesInterface{
 	public void up() {
 		System.out.println("Jump");

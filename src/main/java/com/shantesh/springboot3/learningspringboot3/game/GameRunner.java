@@ -1,5 +1,6 @@
 package com.shantesh.springboot3.learningspringboot3.game;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -7,7 +8,7 @@ public class GameRunner {
 
 	GamesInterface marioGame;
 	
-	public GameRunner(GamesInterface marioGame) {
+	public GameRunner(@Qualifier("MarioGameQualifier") GamesInterface marioGame) {
 		this.marioGame = marioGame;
 	}
 
