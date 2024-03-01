@@ -21,7 +21,6 @@ class YourBusinessClass {
 		return "Using ---> " + dependency1 + " and " + dependency2;
 	}
 
-	@Autowired
 	public YourBusinessClass(Dependency1 dependency1, Dependency2 dependency2) {
 		super();
 		System.out.println("Constructor Injection setDependency1");
