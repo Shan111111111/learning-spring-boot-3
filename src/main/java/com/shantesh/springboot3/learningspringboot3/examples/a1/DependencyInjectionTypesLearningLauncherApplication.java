@@ -2,6 +2,7 @@ package com.shantesh.springboot3.learningspringboot3.examples.a1;
 
 import java.util.Arrays;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +10,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 class YourBusinessClass {
+	@Autowired
 	Dependency1 dependency1;
+	@Autowired
 	Dependency2 dependency2;
 
 	@Override
