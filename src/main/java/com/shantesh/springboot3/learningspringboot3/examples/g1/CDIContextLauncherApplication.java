@@ -2,17 +2,18 @@ package com.shantesh.springboot3.learningspringboot3.examples.g1;
 
 import java.util.Arrays;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
-@Component
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+
+@Named
 class BusinessService {
 	private DataService dataService;
 
-	@Autowired
+	@Inject
 	public void setDataService(DataService dataService) {
 		System.out.println("setter injection....");
 		this.dataService = dataService;
@@ -24,7 +25,7 @@ class BusinessService {
 
 }
 
-@Component
+@Named
 class DataService {
 
 }
