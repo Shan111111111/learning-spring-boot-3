@@ -21,6 +21,10 @@ class ClassB{
 		System.out.println("some initialization logic... ");
 		this.classA = classA;
 	}
+
+	public String doSomething() {
+		return "doing something";
+	}
 }
 
 
@@ -35,7 +39,7 @@ public class LazyinitializationLauncherApplication {
 		try (var context = new AnnotationConfigApplicationContext(LazyinitializationLauncherApplication.class)) {
 			Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 
-			System.out.println(context.getBean(ClassB.class));
+			System.out.println(context.getBean(ClassB.class).doSomething());
 		}
 
 	}
