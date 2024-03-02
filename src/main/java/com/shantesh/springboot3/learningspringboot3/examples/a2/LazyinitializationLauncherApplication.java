@@ -5,6 +5,22 @@ import java.util.Arrays;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
+@Component
+class ClassA{
+
+	
+}
+@Component
+class ClassB{
+	ClassA classA;
+	
+	public ClassB(ClassA classA ) {
+		this.classA = classA;
+	}
+}
+
+
 
 @Configuration
 @ComponentScan
