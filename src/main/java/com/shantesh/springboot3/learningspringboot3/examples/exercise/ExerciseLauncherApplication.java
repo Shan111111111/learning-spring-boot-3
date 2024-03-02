@@ -9,12 +9,13 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Component;
-@Component
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
 interface DataService{
 	int[] retrieveData();
 }
-@Component
+@Repository
 @Primary
 @Qualifier("mongodataservice")
 class MongoDataService implements DataService{
@@ -23,7 +24,7 @@ class MongoDataService implements DataService{
 		return new int[] {11, 22, 33, 44};
 	}
 }
-@Component
+@Repository
 @Qualifier("mysqldataservice")
 class MYSQLDataService implements DataService{
 	public int[] retrieveData() {
@@ -32,7 +33,7 @@ class MYSQLDataService implements DataService{
 	}
 }
 
-@Component
+@Service
 class BusinessCalculationService {
 	@Autowired
 	@Qualifier("mysqldataservice")
