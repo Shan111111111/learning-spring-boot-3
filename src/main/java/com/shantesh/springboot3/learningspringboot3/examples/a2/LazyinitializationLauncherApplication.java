@@ -16,6 +16,7 @@ class ClassB{
 	ClassA classA;
 	
 	public ClassB(ClassA classA ) {
+		System.out.println("some initialization logic... ");
 		this.classA = classA;
 	}
 }
