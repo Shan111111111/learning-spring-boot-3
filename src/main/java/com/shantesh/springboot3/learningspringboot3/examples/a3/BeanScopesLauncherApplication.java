@@ -39,4 +39,4 @@ public class BeanScopesLauncherApplication {
 
 }
 
-//--important notes added
+//--important notes added for usecase
