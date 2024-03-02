@@ -58,8 +58,25 @@ public class ExerciseLauncherApplication {
 			
 			System.out.println(context.getBean(BusinessCalculationService.class));
 			System.out.println(context.getBean(BusinessCalculationService.class).findMax());
+			System.out.println("context is >>>>>>>>>>" + context);
 		}
 
+		try (var context2 = new AnnotationConfigApplicationContext(ExerciseLauncherApplication.class)) {
+			Arrays.stream(context2.getBeanDefinitionNames()).forEach(System.out::println);
+			
+			
+			System.out.println(context2.getBean(BusinessCalculationService.class));
+			System.out.println(context2.getBean(BusinessCalculationService.class).findMax());
+			System.out.println("context2 is >>>>>>>>>>" + context2);
+		}
+		try (var context3 = new AnnotationConfigApplicationContext(ExerciseLauncherApplication.class)) {
+			Arrays.stream(context3.getBeanDefinitionNames()).forEach(System.out::println);
+			
+			
+			System.out.println(context3.getBean(BusinessCalculationService.class));
+			System.out.println(context3.getBean(BusinessCalculationService.class).findMax());
+			System.out.println("context3 is >>>>>>>>>>" + context3);
+		}
 	}
 
 }
