@@ -10,7 +10,8 @@ public class XMLConfigurationContextLauncherApplication {
 
 		try (var context = new ClassPathXmlApplicationContext("contextConfiguration.xml")) {
 			Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
-
+			
+			System.out.println(context.getBean("nameofBeanOrReference"));
 		}
 
 	}
