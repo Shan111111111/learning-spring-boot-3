@@ -12,6 +12,7 @@ public class XMLConfigurationContextLauncherApplication {
 			Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 			
 			System.out.println(context.getBean("nameofBeanOrReference"));
+			System.out.println(context.getBean("age"));
 		}
 
 	}

@@ -8,4 +8,7 @@
 	<bean id="nameofBeanOrReference" class="java.lang.String">
 		<constructor-arg value="Shantesh ----"></constructor-arg>
 	</bean>
+		<bean id="age" class="java.lang.Integer">
+		<constructor-arg value="35"></constructor-arg>
+	</bean>
 </beans>
