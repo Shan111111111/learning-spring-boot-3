@@ -27,8 +27,12 @@ public class BeanScopesLauncherApplication {
 	public static void main(String[] args) {
 
 		try (var context = new AnnotationConfigApplicationContext(BeanScopesLauncherApplication.class)) {
-			Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 
+			System.out.println(context.getBean(PrototypeClass.class));
+			System.out.println(context.getBean(PrototypeClass.class));
+			System.out.println(context.getBean(PrototypeClass.class));
+			System.out.println(context.getBean(NormalClass.class));
+			System.out.println(context.getBean(NormalClass.class));
 		}
 
 	}
