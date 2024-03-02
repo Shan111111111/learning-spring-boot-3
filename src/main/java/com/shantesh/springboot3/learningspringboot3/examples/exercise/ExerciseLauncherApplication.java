@@ -4,17 +4,17 @@ import java.util.Arrays;
 import java.util.OptionalInt;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 @Component
 interface DataService{
 	int[] retrieveData();
 }
 @Component
-@Primary
+@Qualifier("mongodataservice")
 class MongoDataService implements DataService{
 	public int[] retrieveData() {
 		System.out.println("in MongoDataService...");
@@ -22,6 +22,7 @@ class MongoDataService implements DataService{
 	}
 }
 @Component
+@Qualifier("mysqldataservice")
 class MYSQLDataService implements DataService{
 	public int[] retrieveData() {
 		System.out.println("in MYSQLDataService...");
@@ -32,6 +33,7 @@ class MYSQLDataService implements DataService{
 @Component
 class BusinessCalculationService {
 	@Autowired
+	@Qualifier("mysqldataservice")
 	DataService dataService;
 	
 	public OptionalInt findMax() {
