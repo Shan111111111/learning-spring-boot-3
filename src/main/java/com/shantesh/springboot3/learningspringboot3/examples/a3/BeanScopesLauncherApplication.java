@@ -38,3 +38,5 @@ public class BeanScopesLauncherApplication {
 	}
 
 }
+
+//--important notes added
