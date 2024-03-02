@@ -35,6 +35,7 @@ public class LazyinitializationLauncherApplication {
 		try (var context = new AnnotationConfigApplicationContext(LazyinitializationLauncherApplication.class)) {
 			Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
 
+			System.out.println(context.getBean(ClassB.class));
 		}
 
 	}
