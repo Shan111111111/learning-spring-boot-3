@@ -14,6 +14,7 @@ interface DataService{
 	int[] retrieveData();
 }
 @Component
+@Primary
 class MongoDataService implements DataService{
 	public int[] retrieveData() {
 		System.out.println("in MongoDataService...");
@@ -21,7 +22,6 @@ class MongoDataService implements DataService{
 	}
 }
 @Component
-@Primary
 class MYSQLDataService implements DataService{
 	public int[] retrieveData() {
 		System.out.println("in MYSQLDataService...");
