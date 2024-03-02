@@ -11,4 +11,6 @@
 		<bean id="age" class="java.lang.Integer">
 		<constructor-arg value="35"></constructor-arg>
 	</bean>
+	
+	<context:component-scan base-package="com.shantesh.springboot3.learningspringboot3.game"></context:component-scan>
 </beans>
