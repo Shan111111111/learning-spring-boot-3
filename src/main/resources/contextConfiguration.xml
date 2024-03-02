@@ -12,5 +12,12 @@
 		<constructor-arg value="35"></constructor-arg>
 	</bean>
 	
-	<context:component-scan base-package="com.shantesh.springboot3.learningspringboot3.game"></context:component-scan>
+	<bean id="pacmanGame" class="com.shantesh.springboot3.learningspringboot3.game.PacmanGame">
+		
+	</bean>
+	
+	<bean id="gameRunner" class="com.shantesh.springboot3.learningspringboot3.game.GameRunner">
+		<constructor-arg ref="pacmanGame"></constructor-arg>
+	</bean>
+	
 </beans>

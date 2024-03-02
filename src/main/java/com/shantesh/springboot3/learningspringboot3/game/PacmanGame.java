@@ -1,8 +1,5 @@
 package com.shantesh.springboot3.learningspringboot3.game;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class PacmanGame implements GamesInterface{
 	public void up() {
 		System.out.println("pac pac");
