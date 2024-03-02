@@ -8,12 +8,14 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 @Component
 interface DataService{
 	int[] retrieveData();
 }
 @Component
+@Primary
 @Qualifier("mongodataservice")
 class MongoDataService implements DataService{
 	public int[] retrieveData() {
