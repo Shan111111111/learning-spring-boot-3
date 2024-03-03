@@ -8,7 +8,7 @@ public class LearningSpringBoot3Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LearningSpringBoot3Application.class, args);
-		System.out.println("Strated spring boot version 3.0.0.Hurrahhhhhh !!!!!.............");
+		System.out.println("Strated spring boot version 3.0.0.Hurrahhhhhh kehoooo !!!!!.............");
 	}
 
 }
