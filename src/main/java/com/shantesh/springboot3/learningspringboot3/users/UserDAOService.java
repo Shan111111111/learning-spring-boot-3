@@ -3,6 +3,7 @@ package com.shantesh.springboot3.learningspringboot3.users;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 
 import org.springframework.stereotype.Component;
 
@@ -19,5 +20,12 @@ public class UserDAOService {
 	
 	public List<User> findAll(){
 		return users;
+	}
+
+	public User findUserbyId(int id) {
+		
+		Predicate<? super User> predicate = user -> user.getId().equals(id);
+		return users.stream().filter(predicate).findFirst().get();
+		
 	}
 }
