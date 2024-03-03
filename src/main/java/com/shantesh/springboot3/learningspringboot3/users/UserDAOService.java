@@ -7,6 +7,8 @@ import java.util.function.Predicate;
 
 import org.springframework.stereotype.Component;
 
+import com.shantesh.springboot3.learningspringboot3.users.exception.UserNotFoundException;
+
 @Component
 public class UserDAOService {
 
@@ -27,7 +29,11 @@ public class UserDAOService {
 	public User findUserbyId(int id) {
 		
 		Predicate<? super User> predicate = user -> user.getId().equals(id);
-		return users.stream().filter(predicate).findFirst().get();
+		User user = users.stream().filter(predicate).findFirst().orElse(null);
+		if (user == null) {
+			throw new UserNotFoundException("user not found!!!!!");
+		}
+		return user;
 		
 	}
 

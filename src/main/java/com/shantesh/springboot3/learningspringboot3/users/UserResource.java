@@ -34,7 +34,7 @@ public class UserResource {
 		userDAOService.save(savedUser);
 		
 		
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedUser.getId()).toUri();
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/ {id}").buildAndExpand(savedUser.getId()).toUri();
 		return ResponseEntity.created(uri).build();
 	}
 }
