@@ -2,10 +2,15 @@ package com.shantesh.springboot3.learningspringboot3.users;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.Size;
+
 public class User {
 
 	private Integer id;
+	@Size(min = 2, message = "length should be minimum of 2 characters")
 	private String name;
+	@Past
 	private LocalDate dateOfBirth;
 	public User(Integer id, String name, LocalDate dateOfBirth) {
 		super();
