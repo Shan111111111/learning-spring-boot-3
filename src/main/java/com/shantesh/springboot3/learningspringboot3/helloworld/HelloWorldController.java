@@ -1,5 +1,9 @@
 package com.shantesh.springboot3.learningspringboot3.helloworld;
 
+import java.util.Locale;
+
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,6 +33,12 @@ class HelloWorld {
 
 @RestController
 public class HelloWorldController {
+	
+	private MessageSource messageSource;
+
+	public HelloWorldController(MessageSource messageSource) {
+		this.messageSource = messageSource;
+	}
 
 	@GetMapping("/hello")
 	public String helloWorld() {
@@ -45,5 +55,10 @@ public class HelloWorldController {
 	public HelloWorld helloWorld(@PathVariable String name) {
 		HelloWorld helloWorld = new HelloWorld(name);
 		return helloWorld;
+	}
+	@GetMapping("/hello-internationalised")
+	public String helloWorldInternational() {
+		 Locale locale = LocaleContextHolder.getLocale();
+		return messageSource.getMessage("good.morning.message", null, "Default Message", locale);
 	}
 }
